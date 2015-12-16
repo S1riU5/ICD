@@ -13,6 +13,9 @@ namespace ICD
 
         private int code;
         private String icdText;
+        private String restOfIcdText;
+
+        public String RestOfIcdText { get; set; }
 
         public int Code { get; set; }
 

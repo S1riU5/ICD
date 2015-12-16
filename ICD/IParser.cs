@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Security.Cryptography.X509Certificates;
 
 namespace ICD
 {
     public interface IParser
     {
-        DataSet parse(String line);
+        List<DataSet> ParseICDCatalog (string icdStringList);
     }
 }

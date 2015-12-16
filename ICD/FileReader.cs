@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace ICD
 {
@@ -9,23 +10,26 @@ namespace ICD
 
 
         private IParser parser;
-        private StreamReader reader;
+        private string icdString;
+        
 
         public FileReader(IParser parser, string path )
         {
             this.parser = parser;
-            this.reader = new StreamReader(path);
+            this.icdString = File.ReadAllText(path);
+            parser.ParseICDCatalog(icdString);
         }
 
-        public IParser Parser { get; set; }  
-
-
-        public List<DataSet> readFile()
+        public List<DataSet> convertFileToDataSetList()
         {
-
-            return null;
+            List<DataSet> icdDataSets = new List<DataSet>();
+            parser.ParseICDCatalog(icdString);
+            
+           
+            return icdDataSets;
         }
 
+        public IParser Parser { get; set; } 
 
     }
 }

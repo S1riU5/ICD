@@ -7,6 +7,6 @@ namespace ICD
 {
     public interface IParser
     {
-        List<DataSet> ParseICDCatalog (string icdStringList);
+        List<DataSet> ParseIcdCatalog (string icdStringList);
     }
 }

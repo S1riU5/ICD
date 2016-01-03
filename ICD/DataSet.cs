@@ -5,20 +5,20 @@ namespace ICD
 {
     public class DataSet
     {
-        public DataSet(int code, string icdText)
+        public DataSet(string code, string icdText)
         {
             this.code = code;
             this.icdText = icdText;  
         }
 
-        private int code;
-        private String icdText;
-        private String restOfIcdText;
+        private string code;
+        private string icdText;
+        private string restOfIcdText;
 
-        public String RestOfIcdText { get; set; }
+        public string RestOfIcdText { get; set; }
 
         public int Code { get; set; }
 
-        public String IcdString { get; set; }      
+        public string IcdString { get; set; }      
     }
 }

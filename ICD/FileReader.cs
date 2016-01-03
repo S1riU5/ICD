@@ -16,16 +16,15 @@ namespace ICD
         public FileReader(IParser parser, string path )
         {
             this.parser = parser;
-            this.icdString = File.ReadAllText(path);
-            parser.ParseICDCatalog(icdString);
+            //TODO make this more generic
+            icdString = File.ReadAllText(path);
+            parser.ParseIcdCatalog(icdString);
         }
 
-        public List<DataSet> convertFileToDataSetList()
+        public List<DataSet> ConvertFileToDataSetList()
         {
             List<DataSet> icdDataSets = new List<DataSet>();
-            parser.ParseICDCatalog(icdString);
-            
-           
+            parser.ParseIcdCatalog(icdString);
             return icdDataSets;
         }
 

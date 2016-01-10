@@ -7,18 +7,13 @@ namespace ICD
     {
         public DataSet(string code, string icdText)
         {
-            this.code = code;
-            this.icdText = icdText;  
+            this.Code = code;
+            this.IcdText = icdText;  
         }
 
-        private string code;
-        private string icdText;
-        private string restOfIcdText;
 
-        public string RestOfIcdText { get; set; }
+        public string Code { get; set; }
 
-        public int Code { get; set; }
-
-        public string IcdString { get; set; }      
+        public string IcdText { get; set; }
     }
 }
